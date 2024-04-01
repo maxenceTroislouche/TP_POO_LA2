@@ -1,0 +1,12 @@
+services:
+  db:
+    image: mysql:latest
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: exemple
+      MYSQL_DATABASE: immo_la2_poo1
+    restart: always
+    volumes:
+      - ./dump.sql:/docker-entrypoint-initdb.d/dump.sql
+    ports:
+      - "3306:3306"
