@@ -1,0 +1,752 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="@localhost">
+  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.51">
+    <root id="1">
+      <DefaultCasing>exact</DefaultCasing>
+      <DefaultEngine>InnoDB</DefaultEngine>
+      <DefaultTmpEngine>InnoDB</DefaultTmpEngine>
+      <ServerVersion>8.3.0</ServerVersion>
+    </root>
+    <schema id="2" parent="1" name="mysql">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="3" parent="1" name="information_schema">
+      <CollationName>utf8mb3_general_ci</CollationName>
+    </schema>
+    <schema id="4" parent="1" name="performance_schema">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="5" parent="1" name="sys">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="6" parent="1" name="immo_la2_poo1">
+      <LastIntrospectionLocalTimestamp>2024-04-01.17:31:16</LastIntrospectionLocalTimestamp>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <routine id="7" parent="6" name="AjoutLocataire">
+      <Definer>ilg@localhost</Definer>
+      <RoutineKind>procedure</RoutineKind>
+      <SourceTextLength>484</SourceTextLength>
+    </routine>
+    <routine id="8" parent="6" name="ControleProprietaireBail">
+      <Definer>ilg@localhost</Definer>
+      <Deterministic>1</Deterministic>
+      <RoutineKind>function</RoutineKind>
+      <SourceTextLength>425</SourceTextLength>
+    </routine>
+    <routine id="9" parent="6" name="CreationBail">
+      <Definer>ilg@localhost</Definer>
+      <RoutineKind>procedure</RoutineKind>
+      <SourceTextLength>1751</SourceTextLength>
+    </routine>
+    <routine id="10" parent="6" name="CreationHonorairesProprietaire">
+      <Definer>ilg@localhost</Definer>
+      <RoutineKind>procedure</RoutineKind>
+      <SourceTextLength>1764</SourceTextLength>
+    </routine>
+    <routine id="11" parent="6" name="LoyerBail">
+      <Definer>ilg@localhost</Definer>
+      <Deterministic>1</Deterministic>
+      <RoutineKind>function</RoutineKind>
+      <SourceTextLength>161</SourceTextLength>
+    </routine>
+    <routine id="12" parent="6" name="PiecesBail">
+      <Definer>ilg@localhost</Definer>
+      <Deterministic>1</Deterministic>
+      <RoutineKind>function</RoutineKind>
+      <SourceTextLength>251</SourceTextLength>
+    </routine>
+    <routine id="13" parent="6" name="estProprietaire">
+      <Definer>ilg@localhost</Definer>
+      <Deterministic>1</Deterministic>
+      <RoutineKind>function</RoutineKind>
+      <SourceTextLength>323</SourceTextLength>
+    </routine>
+    <table id="14" parent="6" name="BAIL">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="15" parent="6" name="BIEN">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="16" parent="6" name="DESTINATION">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="17" parent="6" name="HONORAIRE">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="18" parent="6" name="PROPRIETE">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="19" parent="6" name="SIGNATURE">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="20" parent="6" name="TIERS">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="21" parent="6" name="TYPE_HONORAIRE">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="22" parent="6" name="TYPE_TIERS">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <argument id="23" parent="7" name="P_ID_BAIL">
+      <DasType>int|0s</DasType>
+      <Position>1</Position>
+    </argument>
+    <argument id="24" parent="7" name="P_ID_LOCATAIRE">
+      <DasType>int|0s</DasType>
+      <Position>2</Position>
+    </argument>
+    <argument id="25" parent="8">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DasType>tinyint(1)|0s</DasType>
+    </argument>
+    <argument id="26" parent="8" name="P_ID_BAIL">
+      <DasType>int|0s</DasType>
+      <Position>1</Position>
+    </argument>
+    <argument id="27" parent="8" name="P_ID_PROPRIETAIRE">
+      <DasType>int|0s</DasType>
+      <Position>2</Position>
+    </argument>
+    <argument id="28" parent="9" name="P_ID_BIEN">
+      <DasType>int|0s</DasType>
+      <Position>1</Position>
+    </argument>
+    <argument id="29" parent="9" name="P_ID_AGENT">
+      <DasType>int|0s</DasType>
+      <Position>2</Position>
+    </argument>
+    <argument id="30" parent="9" name="P_DATE_EFFET">
+      <DasType>date|0s</DasType>
+      <Position>3</Position>
+    </argument>
+    <argument id="31" parent="9" name="P_LOYER">
+      <DasType>decimal(7,2 digit)|0s</DasType>
+      <Position>4</Position>
+    </argument>
+    <argument id="32" parent="9" name="P_IRL_BASE">
+      <DasType>varchar(20)|0s</DasType>
+      <Position>5</Position>
+    </argument>
+    <argument id="33" parent="9" name="P_IRL">
+      <DasType>decimal(5,2 digit)|0s</DasType>
+      <Position>6</Position>
+    </argument>
+    <argument id="34" parent="9" name="P_CHARGES">
+      <DasType>decimal(5,2 digit)|0s</DasType>
+      <Position>7</Position>
+    </argument>
+    <argument id="35" parent="10" name="P_ID_BAIL">
+      <DasType>int|0s</DasType>
+      <Position>1</Position>
+    </argument>
+    <argument id="36" parent="10" name="P_ID_TIERS">
+      <DasType>int|0s</DasType>
+      <Position>2</Position>
+    </argument>
+    <argument id="37" parent="10" name="P_PART_TIERS">
+      <DasType>int|0s</DasType>
+      <Position>3</Position>
+    </argument>
+    <argument id="38" parent="11">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DasType>decimal(5,2 digit)|0s</DasType>
+    </argument>
+    <argument id="39" parent="11" name="P_ID_BAIL">
+      <DasType>int|0s</DasType>
+      <Position>1</Position>
+    </argument>
+    <argument id="40" parent="12">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DasType>int|0s</DasType>
+    </argument>
+    <argument id="41" parent="12" name="P_ID_BAIL">
+      <DasType>int|0s</DasType>
+      <Position>1</Position>
+    </argument>
+    <argument id="42" parent="13">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DasType>tinyint(1)|0s</DasType>
+    </argument>
+    <argument id="43" parent="13" name="P_ID_TIERS">
+      <DasType>int|0s</DasType>
+      <Position>1</Position>
+    </argument>
+    <column id="44" parent="14" name="ID_BAIL">
+      <AutoIncrement>9</AutoIncrement>
+      <DasType>int|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="45" parent="14" name="ID_TIERS_AGENT">
+      <DasType>int|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="46" parent="14" name="DATE_EFFET_BAIL">
+      <DasType>date|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="47" parent="14" name="DUREE_BAIL">
+      <Comment>Durée du bail en années</Comment>
+      <DasType>int|0s</DasType>
+      <DefaultExpression>3</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="48" parent="14" name="MOIS_RECONDUCTION_BAIL">
+      <Comment>Numéro du mois de reconduction du bail</Comment>
+      <DasType>int|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <column id="49" parent="14" name="DUREE_CONGE_DEPART">
+      <Comment>Durée du congé de départ en nombre de mois</Comment>
+      <DasType>int|0s</DasType>
+      <DefaultExpression>3</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+    </column>
+    <column id="50" parent="14" name="LOYER_INITIAL">
+      <DasType>decimal(8,2 digit)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+    </column>
+    <column id="51" parent="14" name="MONTANT_DERNIER_LOYER">
+      <DasType>decimal(8,2 digit)|0s</DasType>
+      <DefaultExpression>0.00</DefaultExpression>
+      <Position>8</Position>
+    </column>
+    <column id="52" parent="14" name="DATE_REVISION_ANNUELLE">
+      <DasType>date|0s</DasType>
+      <Position>9</Position>
+    </column>
+    <column id="53" parent="14" name="COMMENTAIRE_CALCUL">
+      <DasType>varchar(100)|0s</DasType>
+      <Position>10</Position>
+    </column>
+    <column id="54" parent="14" name="IRL_BASE">
+      <DasType>varchar(20)|0s</DasType>
+      <Position>11</Position>
+    </column>
+    <column id="55" parent="14" name="VALEUR_IRL_BASE">
+      <DasType>decimal(5,2 digit)|0s</DasType>
+      <Position>12</Position>
+    </column>
+    <column id="56" parent="14" name="PROVISION_CHARGES">
+      <DasType>decimal(5,2 digit)|0s</DasType>
+      <DefaultExpression>0.00</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>13</Position>
+    </column>
+    <column id="57" parent="14" name="OBJET_CHARGES">
+      <DasType>varchar(100)|0s</DasType>
+      <Position>14</Position>
+    </column>
+    <column id="58" parent="14" name="JOUR_ECHEANCE">
+      <Comment>No du jour d&apos;échéance, compris entre 1 et 10</Comment>
+      <DasType>int|0s</DasType>
+      <DefaultExpression>5</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>15</Position>
+    </column>
+    <column id="59" parent="14" name="MODE_REGLEMENT">
+      <DasType>varchar(5)|0s</DasType>
+      <Position>16</Position>
+    </column>
+    <column id="60" parent="14" name="MONTANT_DEPOT_GARANTIE">
+      <DasType>decimal(7,2 digit)|0s</DasType>
+      <DefaultExpression>0.00</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>17</Position>
+    </column>
+    <column id="61" parent="14" name="ID_BIEN">
+      <Comment>Identifiant du bien concerné</Comment>
+      <DasType>int|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>18</Position>
+    </column>
+    <column id="62" parent="14" name="DATE_RECEPTION_PREAVIS_FIN">
+      <DasType>date|0s</DasType>
+      <Position>19</Position>
+    </column>
+    <column id="63" parent="14" name="DATE_FIN_BAIL">
+      <DasType>date|0s</DasType>
+      <Position>20</Position>
+    </column>
+    <column id="64" parent="14" name="VALIDE">
+      <DasType>int|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>21</Position>
+    </column>
+    <column id="65" parent="14" name="ETAT_BAIL">
+      <DasType>varchar(10)|0s</DasType>
+      <DefaultExpression>&apos;EN COURS&apos;</DefaultExpression>
+      <Position>22</Position>
+    </column>
+    <column id="66" parent="14" name="ID_DESTINATION">
+      <DasType>int|0s</DasType>
+      <DefaultExpression>1</DefaultExpression>
+      <Hidden>1</Hidden>
+      <NotNull>1</NotNull>
+      <Position>23</Position>
+    </column>
+    <foreign-key id="67" parent="14" name="BAIL___fk_BIEN">
+      <ColNames>ID_BIEN</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>ID_BIEN</RefColNames>
+      <RefTableName>BIEN</RefTableName>
+    </foreign-key>
+    <foreign-key id="68" parent="14" name="BAIL_DESTINATION_ID_DESTINATION_fk">
+      <ColNames>ID_DESTINATION</ColNames>
+      <RefColNames>ID_DESTINATION</RefColNames>
+      <RefTableName>DESTINATION</RefTableName>
+    </foreign-key>
+    <index id="69" parent="14" name="PRIMARY">
+      <ColNames>ID_BAIL</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="70" parent="14" name="BAIL___fk_BIEN">
+      <ColNames>ID_BIEN</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="71" parent="14" name="BAIL_DESTINATION_ID_DESTINATION_fk">
+      <ColNames>ID_DESTINATION</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="72" parent="14" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <trigger id="73" parent="14" name="BAIL_AFTER_INSERT">
+      <Definer>ilg@localhost</Definer>
+      <Events>I</Events>
+      <SourceTextLength>610</SourceTextLength>
+      <Turn>after-row</Turn>
+    </trigger>
+    <column id="74" parent="15" name="ID_BIEN">
+      <AutoIncrement>4</AutoIncrement>
+      <Comment>Identifiant du bien</Comment>
+      <DasType>int|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="75" parent="15" name="LIB_BIEN">
+      <Comment>description du bien</Comment>
+      <DasType>varchar(50)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="76" parent="15" name="ADR_NO_VOIE">
+      <Comment>Numéro dans la voie</Comment>
+      <DasType>varchar(7)|0s</DasType>
+      <Position>3</Position>
+    </column>
+    <column id="77" parent="15" name="NOM_VOIE">
+      <Comment>Nom de la voie</Comment>
+      <DasType>varchar(100)|0s</DasType>
+      <Position>4</Position>
+    </column>
+    <column id="78" parent="15" name="CODE_POSTAL">
+      <Comment>Code postal de la commune</Comment>
+      <DasType>varchar(5)|0s</DasType>
+      <Position>5</Position>
+    </column>
+    <column id="79" parent="15" name="COMMUNE">
+      <Comment>Nom de la commune</Comment>
+      <DasType>varchar(100)|0s</DasType>
+      <Position>6</Position>
+    </column>
+    <column id="80" parent="15" name="COMPLEMENT_ADRESSE">
+      <Comment>Exemple : N° appartement, étage ...</Comment>
+      <DasType>varchar(5)|0s</DasType>
+      <Position>7</Position>
+    </column>
+    <column id="81" parent="15" name="DATE_CREATION">
+      <DasType>datetime|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>8</Position>
+    </column>
+    <column id="82" parent="15" name="DATE_DERNIERE_MAJ">
+      <DasType>datetime|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>9</Position>
+    </column>
+    <column id="83" parent="15" name="SURFACE_HABITABLE">
+      <DasType>decimal(5,1 digit)|0s</DasType>
+      <DefaultExpression>20.0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>10</Position>
+    </column>
+    <column id="84" parent="15" name="NOMBRE_PIECES">
+      <DasType>int|0s</DasType>
+      <DefaultExpression>1</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>11</Position>
+    </column>
+    <index id="85" parent="15" name="PRIMARY">
+      <ColNames>ID_BIEN</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="86" parent="15" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="87" parent="16" name="ID_DESTINATION">
+      <AutoIncrement>4</AutoIncrement>
+      <DasType>int|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="88" parent="16" name="LIB_DESTINATION">
+      <DasType>varchar(100)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <index id="89" parent="16" name="PRIMARY">
+      <ColNames>ID_DESTINATION</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="90" parent="16" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="91" parent="17" name="ID_HONORAIRE">
+      <AutoIncrement>1</AutoIncrement>
+      <DasType>int|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="92" parent="17" name="ID_TIERS">
+      <DasType>int|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="93" parent="17" name="ID_TYPE_HONORAIRE">
+      <DasType>int|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="94" parent="17" name="ID_BAIL">
+      <DasType>int|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="95" parent="17" name="MONTANT_HONORAIRE">
+      <DasType>decimal(7,2 digit)|0s</DasType>
+      <Position>5</Position>
+    </column>
+    <column id="96" parent="17" name="DATE_REGLEMENT">
+      <DasType>date|0s</DasType>
+      <Position>6</Position>
+    </column>
+    <foreign-key id="97" parent="17" name="HONORAIRE_TIERS_ID_TIERS_fk">
+      <ColNames>ID_TIERS</ColNames>
+      <RefColNames>ID_TIERS</RefColNames>
+      <RefTableName>TIERS</RefTableName>
+    </foreign-key>
+    <foreign-key id="98" parent="17" name="HONORAIRE_TYPE_HONORAIRE_ID_TYPE_HONORAIRE_fk">
+      <ColNames>ID_TYPE_HONORAIRE</ColNames>
+      <RefColNames>ID_TYPE_HONORAIRE</RefColNames>
+      <RefTableName>TYPE_HONORAIRE</RefTableName>
+    </foreign-key>
+    <index id="99" parent="17" name="PRIMARY">
+      <ColNames>ID_HONORAIRE</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="100" parent="17" name="HONORAIRE_TIERS_ID_TIERS_fk">
+      <ColNames>ID_TIERS</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="101" parent="17" name="HONORAIRE_TYPE_HONORAIRE_ID_TYPE_HONORAIRE_fk">
+      <ColNames>ID_TYPE_HONORAIRE</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="102" parent="17" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="103" parent="18" name="ID_TIERS">
+      <DasType>int|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="104" parent="18" name="ID_BIEN">
+      <DasType>int|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="105" parent="18" name="PART">
+      <DasType>int|0s</DasType>
+      <DefaultExpression>100</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <foreign-key id="106" parent="18" name="PROPRIETE_TIERS_ID_TIERS_fk">
+      <ColNames>ID_TIERS</ColNames>
+      <RefColNames>ID_TIERS</RefColNames>
+      <RefTableName>TIERS</RefTableName>
+    </foreign-key>
+    <foreign-key id="107" parent="18" name="PROPRIETE_BIEN_ID_BIEN_fk">
+      <ColNames>ID_BIEN</ColNames>
+      <RefColNames>ID_BIEN</RefColNames>
+      <RefTableName>BIEN</RefTableName>
+    </foreign-key>
+    <index id="108" parent="18" name="PRIMARY">
+      <ColNames>ID_TIERS
+ID_BIEN</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="109" parent="18" name="PROPRIETE_BIEN_ID_BIEN_fk">
+      <ColNames>ID_BIEN</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="110" parent="18" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="111" parent="19" name="ID_SIGNATURE">
+      <AutoIncrement>2</AutoIncrement>
+      <DasType>int|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="112" parent="19" name="TYPE_SIGNATURE">
+      <DasType>varchar(1)|0s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="113" parent="19" name="DATE_SIGNATURE">
+      <DasType>date|0s</DasType>
+      <Position>3</Position>
+    </column>
+    <column id="114" parent="19" name="ID_BAIL">
+      <DasType>int|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="115" parent="19" name="ID_TIERS">
+      <DasType>int|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <foreign-key id="116" parent="19" name="SIGNATURE_BAIL_ID_BAIL_fk">
+      <ColNames>ID_BAIL</ColNames>
+      <RefColNames>ID_BAIL</RefColNames>
+      <RefTableName>BAIL</RefTableName>
+    </foreign-key>
+    <foreign-key id="117" parent="19" name="SIGNATURE_TIERS_ID_TIERS_fk">
+      <ColNames>ID_TIERS</ColNames>
+      <RefColNames>ID_TIERS</RefColNames>
+      <RefTableName>TIERS</RefTableName>
+    </foreign-key>
+    <index id="118" parent="19" name="PRIMARY">
+      <ColNames>ID_SIGNATURE</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="119" parent="19" name="SIGNATURE_BAIL_ID_BAIL_fk">
+      <ColNames>ID_BAIL</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="120" parent="19" name="SIGNATURE_TIERS_ID_TIERS_fk">
+      <ColNames>ID_TIERS</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="121" parent="19" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="122" parent="20" name="ID_TIERS">
+      <AutoIncrement>23</AutoIncrement>
+      <DasType>int|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="123" parent="20" name="NOM_TIERS">
+      <Comment>Nom du tiers ou raison sociale</Comment>
+      <DasType>varchar(100)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="124" parent="20" name="PRENOM_TIERS">
+      <Comment>Prénom du tiers si personne physique</Comment>
+      <DasType>varchar(100)|0s</DasType>
+      <Position>3</Position>
+    </column>
+    <column id="125" parent="20" name="TEL_TIERS">
+      <Comment>No de téléphone du tiers</Comment>
+      <DasType>varchar(10)|0s</DasType>
+      <DefaultExpression>&apos;00000000&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="126" parent="20" name="MAIL_TIERS">
+      <Comment>Adresse mail du tiers</Comment>
+      <DasType>varchar(100)|0s</DasType>
+      <Position>5</Position>
+    </column>
+    <column id="127" parent="20" name="TYPE_TIERS">
+      <Comment>Type de tiers</Comment>
+      <DasType>int|0s</DasType>
+      <DefaultExpression>1</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+    </column>
+    <column id="128" parent="20" name="NAISSANCE_TIERS">
+      <DasType>date|0s</DasType>
+      <Position>7</Position>
+    </column>
+    <column id="129" parent="20" name="ADRESSE_TIERS">
+      <Comment>Adresse du tiers</Comment>
+      <DasType>varchar(100)|0s</DasType>
+      <Position>8</Position>
+    </column>
+    <column id="130" parent="20" name="CP_TIERS">
+      <DasType>char(5)|0s</DasType>
+      <Position>9</Position>
+    </column>
+    <column id="131" parent="20" name="VILLE_TIERS">
+      <DasType>varchar(100)|0s</DasType>
+      <Position>10</Position>
+    </column>
+    <column id="132" parent="20" name="PIECE_IDENTITE_TIERS">
+      <Comment>Pièce identitié du tiers, chemin d accès au fichier</Comment>
+      <DasType>varchar(1000)|0s</DasType>
+      <Position>11</Position>
+    </column>
+    <column id="133" parent="20" name="RIB_TIERS">
+      <Comment>RIB TIERS , chemin d accès au fichier</Comment>
+      <DasType>varchar(1000)|0s</DasType>
+      <Position>12</Position>
+    </column>
+    <column id="134" parent="20" name="NUMERO_SS_TIERS">
+      <DasType>char(15)|0s</DasType>
+      <Position>13</Position>
+    </column>
+    <foreign-key id="135" parent="20" name="TIERS_TYPE_TIERS_ID_TYPE_TIERS_fk">
+      <ColNames>TYPE_TIERS</ColNames>
+      <RefColNames>ID_TYPE_TIERS</RefColNames>
+      <RefTableName>TYPE_TIERS</RefTableName>
+    </foreign-key>
+    <index id="136" parent="20" name="PRIMARY">
+      <ColNames>ID_TIERS</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="137" parent="20" name="TIERS_TYPE_TIERS_ID_TYPE_TIERS_fk">
+      <ColNames>TYPE_TIERS</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="138" parent="20" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <trigger id="139" parent="20" name="TIERS_BEFORE_INSERT">
+      <Definer>ilg@localhost</Definer>
+      <Events>I</Events>
+      <SourceTextLength>51</SourceTextLength>
+      <Turn>before-row</Turn>
+    </trigger>
+    <trigger id="140" parent="20" name="TIERS_BEFORE_UPDATE">
+      <Definer>ilg@localhost</Definer>
+      <Events>U</Events>
+      <SourceTextLength>51</SourceTextLength>
+      <Turn>before-row</Turn>
+    </trigger>
+    <column id="141" parent="21" name="ID_TYPE_HONORAIRE">
+      <AutoIncrement>5</AutoIncrement>
+      <DasType>int|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="142" parent="21" name="TYPE_HONORAIRE">
+      <DasType>varchar(100)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="143" parent="21" name="PAYE_PAR">
+      <DasType>char(1)|0s</DasType>
+      <DefaultExpression>&apos;P&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="144" parent="21" name="VALEUR_TARIF">
+      <DasType>decimal(5,2 digit)|0s</DasType>
+      <DefaultExpression>0.00</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="145" parent="21" name="TYPE_TARIF">
+      <DasType>varchar(100)|0s</DasType>
+      <DefaultExpression>&apos;POURCENTAGE&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <index id="146" parent="21" name="PRIMARY">
+      <ColNames>ID_TYPE_HONORAIRE</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="147" parent="21" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="148" parent="22" name="ID_TYPE_TIERS">
+      <AutoIncrement>23</AutoIncrement>
+      <DasType>int|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="149" parent="22" name="LIB_TYPE_TIERS">
+      <DasType>varchar(100)|0s</DasType>
+      <Position>2</Position>
+    </column>
+    <index id="150" parent="22" name="PRIMARY">
+      <ColNames>ID_TYPE_TIERS</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="151" parent="22" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <trigger id="152" parent="22" name="TYPE_TIERS_BEFORE_INSERT">
+      <Definer>ilg@localhost</Definer>
+      <Events>I</Events>
+      <SourceTextLength>61</SourceTextLength>
+      <Turn>before-row</Turn>
+    </trigger>
+    <trigger id="153" parent="22" name="TYPE_TIERS_BEFORE_UPDATE">
+      <Definer>ilg@localhost</Definer>
+      <Events>U</Events>
+      <SourceTextLength>61</SourceTextLength>
+      <Turn>before-row</Turn>
+    </trigger>
+  </database-model>
+</dataSource>
